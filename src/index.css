@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif;
+  
+  --color-table: #1e4d2b;
+  --color-wood: #3e2723;
+  --color-gold: #d4af37;
+  --color-accent: #c62828;
+  --color-tile: #f9f9f9;
+  --color-dark: #121212;
+  --color-surface: #1a1a1a;
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-white font-sans;
+  }
+}
