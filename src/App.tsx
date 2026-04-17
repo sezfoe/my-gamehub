@@ -31,12 +31,6 @@ export default function App() {
               key="home"
               className="flex-1 flex flex-col relative"
             >
-              {/* Geometric Background Elements */}
-              <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-                 <div className="absolute top-[-10%] left-[-5%] w-[50vw] h-[50vw] border-[0.5px] border-gold/10 rotate-12" />
-                 <div className="absolute bottom-[-10%] right-[-5%] w-[40vw] h-[40vw] border-[0.5px] border-accent/10 -rotate-12" />
-              </div>
-
               <div className="z-10 w-full max-w-7xl mx-auto px-6 py-12 md:py-24 flex flex-col items-center">
                 {/* Hub Hero */}
                 <div

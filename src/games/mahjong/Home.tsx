@@ -10,12 +10,6 @@ interface HomeProps {
 export default function Home({ onStart, onBack }: HomeProps) {
   return (
     <div className="flex-1 flex flex-col items-center justify-center relative px-4 bg-dark">
-      {/* Geometric Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-         <div className="absolute top-[10%] right-[10%] w-[40vw] h-[40vw] border-2 border-gold/5 rotate-45" />
-         <div className="absolute bottom-[10%] left-[10%] w-[30vw] h-[30vw] border-2 border-accent/5 -rotate-12" />
-      </div>
-
       {/* Hero Section */}
       <main className="z-10 text-center max-w-4xl flex flex-col items-center">
         <div
