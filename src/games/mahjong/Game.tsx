@@ -114,7 +114,7 @@ export default function Game({ onBack }: GameProps) {
           </div>
 
           {/* Bottom Player (Self / South) */}
-          <div id="south-player-root" className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center border border-black">
+          <div id="south-player-root" className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center border border-black">
              <div id="south-tiles-container" className="mb-1 scale-90 md:scale-95 lg:scale-100 flex flex-col items-center border border-black/30">
                 {/* Meld Area (In front - Above for South) */}
                 <div id="south-meld-area" className="flex gap-4 mb-1.5 opacity-40 border border-black/20">
