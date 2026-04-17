@@ -23,7 +23,7 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
 
   return (
-    <div className="w-full h-screen bg-dark text-white selection:bg-gold selection:text-wood overflow-hidden flex flex-col">
+    <div className="w-full min-h-screen bg-dark text-white selection:bg-gold selection:text-wood overflow-hidden flex flex-col">
       <div className="flex-1 relative overflow-hidden flex flex-col">
         <AnimatePresence mode="wait">
           {currentPage === 'home' ? (
@@ -31,7 +31,7 @@ export default function App() {
               key="home"
               className="flex-1 flex flex-col relative"
             >
-              <div className="z-10 w-full max-w-7xl mx-auto px-6 py-12 md:py-24 flex flex-col items-center">
+              <div className="z-10 w-full px-6 py-12 md:py-24 flex flex-col items-center">
                 {/* Hub Hero */}
                 <div
                   className="text-center mb-16 md:mb-24"

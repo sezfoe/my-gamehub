@@ -12,7 +12,7 @@ export default function Game({ onBack }: GameProps) {
       {/* Main Table Container */}
       <div className="relative w-full h-full flex items-center justify-center">
         {/* Table Felt Surface */}
-        <div className="w-full h-full max-w-[1200px] max-h-[900px] bg-table relative flex items-center justify-center overflow-hidden border border-white/5 shadow-[inset_0_0_100px_rgba(0,0,0,0.5)]">
+        <div className="w-full h-full bg-table relative flex items-center justify-center overflow-hidden border border-white/5 shadow-[inset_0_0_100px_rgba(0,0,0,0.5)]">
           {/* Subtle Grid Pattern on Felt */}
           <div className="absolute inset-0 opacity-10 pointer-events-none" 
                style={{ backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }} 
