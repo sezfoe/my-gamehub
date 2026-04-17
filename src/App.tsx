@@ -27,11 +27,8 @@ export default function App() {
       <div className="flex-1 relative overflow-hidden flex flex-col">
         <AnimatePresence mode="wait">
           {currentPage === 'home' ? (
-            <motion.div
+            <div
               key="home"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0, scale: 0.98, y: -20 }}
               className="flex-1 flex flex-col relative"
             >
               {/* Geometric Background Elements */}
@@ -42,23 +39,18 @@ export default function App() {
 
               <div className="z-10 w-full max-w-7xl mx-auto px-6 py-12 md:py-24 flex flex-col items-center">
                 {/* Hub Hero */}
-                <motion.div
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
+                <div
                   className="text-center mb-16 md:mb-24"
                 >
                   <h1 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 uppercase">
                     樂遊<span className="text-gold">大集合</span>
                   </h1>
-                </motion.div>
+                </div>
 
                 <div className="flex justify-center w-full">
                   {GAMES.map((game, i) => (
-                    <motion.div
+                    <div
                       key={game.id}
-                      initial={{ y: 30, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{ delay: 0.1 * (i + 1) }}
                       onClick={() => setCurrentPage(game.id as any)}
                       className="group relative w-full max-w-md aspect-[16/6] overflow-hidden border border-white/10 rounded-sm p-4 flex flex-col items-center justify-center cursor-pointer transition-all duration-500 hover:border-gold/50"
                     >
@@ -71,13 +63,13 @@ export default function App() {
                       </div>
 
                       {/* Hover Border Accent */}
-                      <div className="absolute inset-0 border border-gold opacity-0 group-hover:opacity-20 transition-opacity scale-95 group-hover:scale-100 duration-500 pointer-events-none" />
-                    </motion.div>
+                      <div className="absolute inset-0 border border-gold opacity-0 group-hover:opacity-20 transition-opacity pointer-events-none" />
+                    </div>
                   ))}
                 </div>
               </div>
 
-            </motion.div>
+            </div>
           ) : currentPage === 'mahjong-home' ? (
             <motion.div
               key="mahjong-home"

@@ -18,38 +18,31 @@ export default function Home({ onStart, onBack }: HomeProps) {
 
       {/* Hero Section */}
       <main className="z-10 text-center max-w-4xl flex flex-col items-center">
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2 }}
+        <div
           className="mb-12"
         >
           <h2 className="text-6xl md:text-8xl font-black leading-none tracking-tight mb-8 text-white uppercase">
             <span className="text-gold text-7xl md:text-9xl">麻將</span>
           </h2>
-        </motion.div>
+        </div>
 
-        <motion.button
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
+        <button
           onClick={onStart}
           className="group relative flex items-center justify-center gap-4 bg-gold text-wood px-12 py-4 rounded-sm font-black text-2xl hover:brightness-110 transition-all duration-300 cursor-pointer shadow-[0_10px_30px_rgba(212,175,55,0.2)] min-w-[280px]"
         >
           <Play size={24} fill="currentColor" />
           遊戲開始
           <div className="absolute -inset-1 border border-gold/40 scale-100 group-hover:scale-105 transition-transform pointer-events-none" />
-        </motion.button>
+        </button>
 
-        <motion.button
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
+        <button
           onClick={onBack}
           className="group relative flex items-center justify-center gap-4 bg-black/40 text-gold border border-gold/50 px-12 py-4 rounded-sm font-black text-2xl hover:bg-black/60 transition-all duration-300 cursor-pointer mt-6 min-w-[280px]"
         >
           <ArrowLeft size={24} />
           離開遊戲
           <div className="absolute -inset-1 border border-gold/20 scale-100 group-hover:scale-105 transition-transform pointer-events-none" />
-        </motion.button>
+        </button>
       </main>
 
     </div>
