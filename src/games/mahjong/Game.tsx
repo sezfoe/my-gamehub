@@ -48,19 +48,19 @@ export default function Game({ onBack }: GameProps) {
           {/* Player Areas */}
           
           {/* Top Player (Opponent / North) */}
-          <div className="absolute top-4 left-1/2 -translate-x-1/2 flex flex-col items-center group border border-black">
-            <div className="mb-3 flex flex-row gap-1.5 items-center border border-black/30">
-              <div className="w-10 h-10 bg-black/70 border border-gold rounded-sm text-sm text-gold font-black shadow-xl flex items-center justify-center tracking-tighter">北</div>
-              <div className="h-10 px-3 bg-black/50 border border-white/20 rounded-sm text-sm text-white font-mono shadow-xl flex items-center justify-center min-w-[90px]">$15,200</div>
+          <div id="north-player-root" className="absolute top-4 left-1/2 -translate-x-1/2 flex flex-col items-center group border border-black">
+            <div id="north-info-area" className="mb-3 flex flex-row gap-1.5 items-center border border-black/30">
+              <div id="north-dir-box" className="w-10 h-10 bg-black/70 border border-gold rounded-sm text-sm text-gold font-black shadow-xl flex items-center justify-center tracking-tighter">北</div>
+              <div id="north-score-box" className="h-10 px-3 bg-black/50 border border-white/20 rounded-sm text-sm text-white font-mono shadow-xl flex items-center justify-center min-w-[90px]">$15,200</div>
             </div>
             {/* Hand */}
-            <div className="flex gap-0.5 border border-black/30">
+            <div id="north-hand-area" className="flex gap-0.5 border border-black/30">
               {Array.from({ length: 16 }).map((_, i) => (
                 <div key={i} className="w-7 h-10 bg-gradient-to-br from-emerald-700 to-emerald-900 border border-black/50 rounded-sm shadow-md" />
               ))}
             </div>
             {/* Meld Area (In front - Below for North) */}
-            <div className="mt-2 flex gap-2 opacity-40 border border-black/30">
+            <div id="north-meld-area" className="mt-2 flex gap-2 opacity-40 border border-black/30">
               <div className="flex gap-0.5">
                 {[1, 2, 3].map((_, i) => (
                   <div key={i} className="w-6 h-8 bg-tile rounded-sm border border-black/20" />
@@ -70,19 +70,19 @@ export default function Game({ onBack }: GameProps) {
           </div>
 
           {/* Left Player (West) */}
-          <div className="absolute left-6 top-1/2 -translate-y-1/2 flex items-center gap-4 border border-black">
-            <div className="flex flex-col gap-2 whitespace-nowrap items-center border border-black/30">
-              <div className="w-10 h-10 bg-black/70 border border-gold rounded-sm text-sm text-gold font-black shadow-xl flex items-center justify-center tracking-tighter">西</div>
-              <div className="h-10 px-3 bg-black/50 border border-white/20 rounded-sm text-sm text-white font-mono shadow-xl flex items-center justify-center min-w-[90px]">$18,500</div>
+          <div id="west-player-root" className="absolute left-6 top-1/2 -translate-y-1/2 flex items-center gap-4 border border-black">
+            <div id="west-info-area" className="flex flex-col gap-2 whitespace-nowrap items-center border border-black/30">
+              <div id="west-dir-box" className="w-10 h-10 bg-black/70 border border-gold rounded-sm text-sm text-gold font-black shadow-xl flex items-center justify-center tracking-tighter">西</div>
+              <div id="west-score-box" className="h-10 px-3 bg-black/50 border border-white/20 rounded-sm text-sm text-white font-mono shadow-xl flex items-center justify-center min-w-[90px]">$18,500</div>
             </div>
             {/* Hand */}
-            <div className="flex flex-col gap-0.5 border border-black/30">
+            <div id="west-hand-area" className="flex flex-col gap-0.5 border border-black/30">
               {Array.from({ length: 16 }).map((_, i) => (
                 <div key={i} className="w-10 h-7 bg-gradient-to-br from-emerald-700 to-emerald-900 border border-black/50 rounded-sm shadow-sm" />
               ))}
             </div>
             {/* Meld Area (In front - Right for West) */}
-            <div className="flex flex-col gap-2 opacity-40 border border-black/30">
+            <div id="west-meld-area" className="flex flex-col gap-2 opacity-40 border border-black/30">
               <div className="flex flex-col gap-0.5">
                 {[1, 2, 3].map((_, i) => (
                   <div key={i} className="w-8 h-6 bg-tile rounded-sm border border-black/20" />
@@ -92,19 +92,19 @@ export default function Game({ onBack }: GameProps) {
           </div>
 
           {/* Right Player (East) */}
-          <div className="absolute right-6 top-1/2 -translate-y-1/2 flex items-center flex-row-reverse gap-4 border border-black">
-            <div className="flex flex-col gap-2 whitespace-nowrap items-center border border-black/30">
-              <div className="w-10 h-10 bg-black/70 border border-gold rounded-sm text-sm text-gold font-black shadow-xl flex items-center justify-center tracking-tighter">東</div>
-              <div className="h-10 px-3 bg-black/50 border border-white/20 rounded-sm text-sm text-white font-mono shadow-xl flex items-center justify-center min-w-[90px]">$12,800</div>
+          <div id="east-player-root" className="absolute right-6 top-1/2 -translate-y-1/2 flex items-center flex-row-reverse gap-4 border border-black">
+            <div id="east-info-area" className="flex flex-col gap-2 whitespace-nowrap items-center border border-black/30">
+              <div id="east-dir-box" className="w-10 h-10 bg-black/70 border border-gold rounded-sm text-sm text-gold font-black shadow-xl flex items-center justify-center tracking-tighter">東</div>
+              <div id="east-score-box" className="h-10 px-3 bg-black/50 border border-white/20 rounded-sm text-sm text-white font-mono shadow-xl flex items-center justify-center min-w-[90px]">$12,800</div>
             </div>
             {/* Hand */}
-            <div className="flex flex-col-reverse gap-0.5 border border-black/30">
+            <div id="east-hand-area" className="flex flex-col-reverse gap-0.5 border border-black/30">
               {Array.from({ length: 16 }).map((_, i) => (
                 <div key={i} className="w-10 h-7 bg-gradient-to-br from-emerald-700 to-emerald-900 border border-black/50 rounded-sm shadow-sm" />
               ))}
             </div>
             {/* Meld Area (In front - Left for East) */}
-            <div className="flex flex-col gap-2 opacity-40 border border-black/30">
+            <div id="east-meld-area" className="flex flex-col gap-2 opacity-40 border border-black/30">
               <div className="flex flex-col gap-0.5">
                 {[1, 2, 3].map((_, i) => (
                   <div key={i} className="w-8 h-6 bg-tile rounded-sm border border-black/20" />
@@ -114,10 +114,10 @@ export default function Game({ onBack }: GameProps) {
           </div>
 
           {/* Bottom Player (Self / South) */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center border border-black">
-             <div className="mb-1 scale-90 md:scale-95 lg:scale-100 flex flex-col items-center border border-black/30">
+          <div id="south-player-root" className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center border border-black">
+             <div id="south-tiles-container" className="mb-1 scale-90 md:scale-95 lg:scale-100 flex flex-col items-center border border-black/30">
                 {/* Meld Area (In front - Above for South) */}
-                <div className="flex gap-4 mb-1.5 opacity-40 border border-black/20">
+                <div id="south-meld-area" className="flex gap-4 mb-1.5 opacity-40 border border-black/20">
                    <div className="flex gap-0.5">
                      {[1, 2, 3].map((_, i) => (
                        <div key={i} className="w-8 h-10 bg-tile/80 rounded-sm border-b-[3px] border-stone-400 flex items-center justify-center text-xs">
@@ -128,7 +128,7 @@ export default function Game({ onBack }: GameProps) {
                 </div>
 
                 {/* Player Hands Preview */}
-                <div className="flex items-end gap-1 pr-10 border border-black/20">
+                <div id="south-hand-area" className="flex items-end gap-1 pr-10 border border-black/20">
                    {['萬','萬','萬','筒','筒','筒','條','條','條','風','東','南','西','北','中','發'].map((type, i) => (
                      <motion.div
                        key={i}
@@ -149,17 +149,17 @@ export default function Game({ onBack }: GameProps) {
                    </motion.div>
                 </div>
              </div>
-             <div className="mt-4 flex flex-row gap-2 items-center border border-black/30">
-               <div className="w-10 h-10 bg-black/80 border border-gold rounded-sm text-xl text-gold font-black shadow-2xl flex items-center justify-center">南</div>
-               <div className="h-10 px-6 bg-black/60 border border-white/30 rounded-sm text-2xl text-white font-mono shadow-2xl flex items-center justify-center min-w-[140px]">$22,100</div>
+             <div id="south-info-area" className="mt-4 flex flex-row gap-2 items-center border border-black/30">
+               <div id="south-dir-box" className="w-10 h-10 bg-black/80 border border-gold rounded-sm text-xl text-gold font-black shadow-2xl flex items-center justify-center">南</div>
+               <div id="south-score-box" className="h-10 px-6 bg-black/60 border border-white/30 rounded-sm text-2xl text-white font-mono shadow-2xl flex items-center justify-center min-w-[140px]">$22,100</div>
              </div>
           </div>
 
           {/* Central Play Area (Wall & Discards) */}
-          <div className="relative flex items-center justify-center w-[520px] h-[400px] z-0 -translate-y-6 border border-black">
+          <div id="center-play-area" className="relative flex items-center justify-center w-[520px] h-[400px] z-0 -translate-y-6 border border-black">
             {/* The Wall (144 Tiles represented as 4 sides of 18 stacks) */}
             {/* Top Wall */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 flex gap-0.5 border border-black/10">
+            <div id="wall-top" className="absolute top-0 left-1/2 -translate-x-1/2 flex gap-0.5 border border-black/10">
               {Array.from({ length: 18 }).map((_, i) => (
                 <div key={i} className="relative w-5 h-10">
                   <div className="absolute top-0 left-0 w-5 h-7 bg-tile/10 border border-white/5 rounded-t-sm" />
@@ -168,7 +168,7 @@ export default function Game({ onBack }: GameProps) {
               ))}
             </div>
             {/* Bottom Wall */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-0.5">
+            <div id="wall-bottom" className="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-0.5">
               {Array.from({ length: 18 }).map((_, i) => (
                 <div key={i} className="relative w-5 h-10">
                   <div className="absolute bottom-0 left-0 w-5 h-7 bg-tile/10 border border-white/5 rounded-b-sm shadow-sm" />
@@ -177,7 +177,7 @@ export default function Game({ onBack }: GameProps) {
               ))}
             </div>
             {/* Left Wall */}
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 flex flex-col gap-0.5">
+            <div id="wall-left" className="absolute left-0 top-1/2 -translate-y-1/2 flex flex-col gap-0.5">
               {Array.from({ length: 18 }).map((_, i) => (
                 <div key={i} className="relative w-10 h-5">
                   {/* Bottom layer (Outer) */}
@@ -188,7 +188,7 @@ export default function Game({ onBack }: GameProps) {
               ))}
             </div>
             {/* Right Wall */}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col gap-0.5">
+            <div id="wall-right" className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col gap-0.5">
               {Array.from({ length: 18 }).map((_, i) => (
                 <div key={i} className="relative w-10 h-5">
                   <div className="absolute right-0 top-0 w-7 h-5 bg-tile/10 border border-white/5 rounded-r-sm shadow-sm" />
@@ -198,7 +198,7 @@ export default function Game({ onBack }: GameProps) {
             </div>
 
             {/* Discard Pool (Matrix Layout - Max 84 tiles) */}
-            <div className="w-[420px] h-[280px] flex items-center justify-center p-2 border border-black/40">
+            <div id="discard-pool-root" className="w-[420px] h-[280px] flex items-center justify-center p-2 border border-black/40">
               <div className="grid grid-cols-14 gap-0.5 opacity-40">
                 {Array.from({ length: 84 }).map((_, i) => (
                   <div 
